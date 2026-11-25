@@ -1,0 +1,10 @@
+  0 SNES Function norm 1.766211036513e-01
+  1 SNES Function norm 1.772302724043e-03
+  2 SNES Function norm 1.257789561329e-03
+  3 SNES Function norm 7.492569178881e-04
+  4 SNES Function norm 3.970928541840e-04
+  5 SNES Function norm 1.710775866797e-04
+  6 SNES Function norm 7.325935653774e-05
+  7 SNES Function norm 3.390220546218e-06
+  8 SNES Function norm 3.642573064249e-14
+Newton: converged reason=2 (OK) in 8 iterations

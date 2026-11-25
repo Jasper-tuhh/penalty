@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="3.0" xmlns:xi="https://www.w3.org/2001/XInclude">
+  <Domain>
+    <Grid Name="mesh" GridType="Uniform">
+      <Topology TopologyType="Hexahedron" NumberOfElements="13500" NodesPerElement="8">
+        <DataItem Dimensions="13500 8" NumberType="Int" Format="HDF">contact_penalty_results.h5:/Mesh/mesh/topology</DataItem>
+      </Topology>
+      <Geometry GeometryType="XYZ">
+        <DataItem Dimensions="15376 3" Format="HDF">contact_penalty_results.h5:/Mesh/mesh/geometry</DataItem>
+      </Geometry>
+    </Grid>
+    <Grid Name="Displacement" GridType="Collection" CollectionType="Temporal">
+      <Grid Name="Displacement" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0" />
+        <Attribute Name="Displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="15376 3" Format="HDF">contact_penalty_results.h5:/Function/Displacement/0</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid Name="Gap" GridType="Collection" CollectionType="Temporal">
+      <Grid Name="Gap" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0" />
+        <Attribute Name="Gap" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="15376 1" Format="HDF">contact_penalty_results.h5:/Function/Gap/0</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid Name="Contact pressure" GridType="Collection" CollectionType="Temporal">
+      <Grid Name="Contact pressure" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0" />
+        <Attribute Name="Contact pressure" AttributeType="Scalar" Center="Cell">
+          <DataItem Dimensions="13500 1" Format="HDF">contact_penalty_results.h5:/Function/Contact pressure/0</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>
