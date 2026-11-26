@@ -1,0 +1,7 @@
+cbox_penalty: reg_method=huhu_lulu, k=1.0e-05, degrees=[2], meshes=[(20, 10)]
+
+Polynomial degree p = 2
+----------------------------------------------------------------------------------------------------
+Mesh size (h)   | Trgt Dsp [%]   | Load steps   | Newton iters   | Avg. Newton/Step   | Solver time [s]
+----------------------------------------------------------------------------------------------------
+--- cbox asimov-contact p=2, 20x10x2 hexahedron (cavity removed), 184 cells, 6975 dofs, neo_hooke, ZBC=free, depth=1.1, param=5.545e+06 (~penalty 1.0e+07), theta=0, 36+36 wall facets (local) ---

@@ -1,0 +1,76 @@
+Traceback (most recent call last):
+  File "/fibus/fs0/1f/cvu7589/penalty/cbox_penalty.py", line 126, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/fibus/fs0/1f/cvu7589/penalty/cbox_penalty.py", line 126, in <module>
+  File "/fibus/fs0/1f/cvu7589/penalty/cbox_penalty.py", line 126, in <module>
+Traceback (most recent call last):
+  File "/fibus/fs0/1f/cvu7589/penalty/cbox_penalty.py", line 126, in <module>
+    sweep_main("cbox_penalty", run_case, default_meshes="20x10,30x15,40x20")
+  File "/fibus/fs0/1f/cvu7589/penalty/driver3d.py", line 218, in sweep_main
+    sweep_main("cbox_penalty", run_case, default_meshes="20x10,30x15,40x20")
+    sweep_main("cbox_penalty", run_case, default_meshes="20x10,30x15,40x20")
+  File "/fibus/fs0/1f/cvu7589/penalty/driver3d.py", line 218, in sweep_main
+  File "/fibus/fs0/1f/cvu7589/penalty/driver3d.py", line 218, in sweep_main
+    sweep_main("cbox_penalty", run_case, default_meshes="20x10,30x15,40x20")
+  File "/fibus/fs0/1f/cvu7589/penalty/driver3d.py", line 218, in sweep_main
+    res = run_case(Nx, Ny, fe_degree, reg_method, k_reg, out_dir, emit, verbose)
+    res = run_case(Nx, Ny, fe_degree, reg_method, k_reg, out_dir, emit, verbose)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fibus/fs0/1f/cvu7589/penalty/cbox_penalty.py", line 60, in run_case
+    res = run_case(Nx, Ny, fe_degree, reg_method, k_reg, out_dir, emit, verbose)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fibus/fs0/1f/cvu7589/penalty/cbox_penalty.py", line 60, in run_case
+  File "/fibus/fs0/1f/cvu7589/penalty/cbox_penalty.py", line 60, in run_case
+    res = run_case(Nx, Ny, fe_degree, reg_method, k_reg, out_dir, emit, verbose)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fibus/fs0/1f/cvu7589/penalty/cbox_penalty.py", line 60, in run_case
+    mesh0, facet_marker = contact_mesh(body, 0.1, 1.0)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fibus/fs0/1f/cvu7589/penalty/asimov3d.py", line 67, in contact_mesh
+    mesh0, facet_marker = contact_mesh(body, 0.1, 1.0)
+    mesh0, facet_marker = contact_mesh(body, 0.1, 1.0)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fibus/fs0/1f/cvu7589/penalty/asimov3d.py", line 67, in contact_mesh
+  File "/fibus/fs0/1f/cvu7589/penalty/asimov3d.py", line 67, in contact_mesh
+    mesh0, facet_marker = contact_mesh(body, 0.1, 1.0)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fibus/fs0/1f/cvu7589/penalty/asimov3d.py", line 67, in contact_mesh
+    mesh, facet_marker, _ = create_contact_mesh(mesh, facet_marker, cell_marker,
+    mesh, facet_marker, _ = create_contact_mesh(mesh, facet_marker, cell_marker,
+    mesh, facet_marker, _ = create_contact_mesh(mesh, facet_marker, cell_marker,
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/skf/cvu7589/envs/fenicsx-contact/lib/python3.12/site-packages/dolfinx_contact/parallel_mesh_ghosting.py", line 25, in create_contact_mesh
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/skf/cvu7589/envs/fenicsx-contact/lib/python3.12/site-packages/dolfinx_contact/parallel_mesh_ghosting.py", line 25, in create_contact_mesh
+    mesh, facet_marker, _ = create_contact_mesh(mesh, facet_marker, cell_marker,
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/skf/cvu7589/envs/fenicsx-contact/lib/python3.12/site-packages/dolfinx_contact/parallel_mesh_ghosting.py", line 25, in create_contact_mesh
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/skf/cvu7589/envs/fenicsx-contact/lib/python3.12/site-packages/dolfinx_contact/parallel_mesh_ghosting.py", line 25, in create_contact_mesh
+    new_mesh, new_fmarker, new_dmarker = create_contact_mesh_cpp(
+    new_mesh, new_fmarker, new_dmarker = create_contact_mesh_cpp(
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_contact_mesh_cpp(): incompatible function arguments. The following argument types are supported:
+    1. create_contact_mesh_cpp(arg0: dolfinx::mesh::Mesh<double>, arg1: dolfinx::mesh::MeshTags<int>, arg2: dolfinx::mesh::MeshTags<int>, arg3: collections.abc.Sequence[int], arg4: float, /) -> tuple[dolfinx::mesh::Mesh<double>, dolfinx::mesh::MeshTags<int>, dolfinx::mesh::MeshTags<int>]
+
+Invoked with types: dolfinx.cpp.mesh.Mesh_float64, dolfinx.cpp.mesh.MeshTags_int32, dolfinx.cpp.mesh.MeshTags_int32, list, float
+    new_mesh, new_fmarker, new_dmarker = create_contact_mesh_cpp(
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_contact_mesh_cpp(): incompatible function arguments. The following argument types are supported:
+    1. create_contact_mesh_cpp(arg0: dolfinx::mesh::Mesh<double>, arg1: dolfinx::mesh::MeshTags<int>, arg2: dolfinx::mesh::MeshTags<int>, arg3: collections.abc.Sequence[int], arg4: float, /) -> tuple[dolfinx::mesh::Mesh<double>, dolfinx::mesh::MeshTags<int>, dolfinx::mesh::MeshTags<int>]
+
+Invoked with types: dolfinx.cpp.mesh.Mesh_float64, dolfinx.cpp.mesh.MeshTags_int32, dolfinx.cpp.mesh.MeshTags_int32, list, float
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_contact_mesh_cpp(): incompatible function arguments. The following argument types are supported:
+    1. create_contact_mesh_cpp(arg0: dolfinx::mesh::Mesh<double>, arg1: dolfinx::mesh::MeshTags<int>, arg2: dolfinx::mesh::MeshTags<int>, arg3: collections.abc.Sequence[int], arg4: float, /) -> tuple[dolfinx::mesh::Mesh<double>, dolfinx::mesh::MeshTags<int>, dolfinx::mesh::MeshTags<int>]
+
+Invoked with types: dolfinx.cpp.mesh.Mesh_float64, dolfinx.cpp.mesh.MeshTags_int32, dolfinx.cpp.mesh.MeshTags_int32, list, float
+    new_mesh, new_fmarker, new_dmarker = create_contact_mesh_cpp(
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_contact_mesh_cpp(): incompatible function arguments. The following argument types are supported:
+    1. create_contact_mesh_cpp(arg0: dolfinx::mesh::Mesh<double>, arg1: dolfinx::mesh::MeshTags<int>, arg2: dolfinx::mesh::MeshTags<int>, arg3: collections.abc.Sequence[int], arg4: float, /) -> tuple[dolfinx::mesh::Mesh<double>, dolfinx::mesh::MeshTags<int>, dolfinx::mesh::MeshTags<int>]
+
+Invoked with types: dolfinx.cpp.mesh.Mesh_float64, dolfinx.cpp.mesh.MeshTags_int32, dolfinx.cpp.mesh.MeshTags_int32, list, float

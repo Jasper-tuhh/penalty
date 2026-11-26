@@ -1,0 +1,10 @@
+cbox_penalty: reg_method=none, k=1.0e-05, degrees=[1], meshes=[(20, 10), (30, 15), (40, 20)]
+
+Polynomial degree p = 1
+----------------------------------------------------------------------------------------------------
+Mesh size (h)   | Trgt Dsp [%]   | Load steps   | Newton iters   | Avg. Newton/Step   | Solver time [s]
+----------------------------------------------------------------------------------------------------
+--- cbox asimov-contact p=1, 20x10x8 hexahedron (cavity removed), 736 cells, 3807 dofs, neo_hooke, ZBC=free, depth=1.1, param=1.546e+06 (~penalty 1.0e+07), theta=0, 144+144 wall facets (local) ---
+Step failed at disp -0.52312 -> -0.54187: Newton did not converge (15 its)
+Step failed at disp -0.52312 -> -0.53250: Newton did not converge (15 its)
+Step failed at disp -0.52312 -> -0.52781: Newton did not converge (15 its)

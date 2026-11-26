@@ -1,0 +1,23 @@
+monolith_penalty: reg_method=none, k=1.0e-05, degrees=[1], meshes=[(20, 10), (40, 20), (60, 30)]
+
+Polynomial degree p = 1
+----------------------------------------------------------------------------------------------------
+Mesh size (h)   | Trgt Dsp [%]   | Load steps   | Newton iters   | Avg. Newton/Step   | Solver time [s]
+----------------------------------------------------------------------------------------------------
+--- monolith asimov-contact p=1, 20x10x8 hexahedron (cavity removed), 736 cells, 3942 dofs, hartmann_neff, ZBC=free, depth=2, param=2.739e+06 (~penalty 1.0e+07), theta=0, 144+144 wall facets (local) ---
+Step failed at disp -0.70781 -> -0.80781: Newton did not converge (15 its)
+Step failed at disp -0.75781 -> -0.83281: Newton did not converge (15 its)
+Step failed at disp -0.75781 -> -0.79531: Newton did not converge (15 its)
+2.739e-01       | 100.00         | 20           | 128            | 6.40               | 46.860         
+   [20x10x8, 736 cells, 3942 dofs, potential = 5.307953e-02]
+--- monolith asimov-contact p=1, 40x20x8 hexahedron (cavity removed), 2944 cells, 12852 dofs, hartmann_neff, ZBC=free, depth=2, param=2.562e+06 (~penalty 1.0e+07), theta=0, 288+288 wall facets (local) ---
+Step failed at disp -0.70781 -> -0.80781: Newton did not converge (15 its)
+Step failed at disp -0.83281 -> -0.91531: Newton did not converge (15 its)
+Step failed at disp -0.91944 -> -0.96935: Newton did not converge (15 its)
+Step failed at disp -0.94439 -> -0.97185: Newton did not converge (15 its)
+2.562e-01       | 100.00         | 20           | 155            | 7.75               | 105.993        
+   [40x20x8, 2944 cells, 12852 dofs, potential = 4.138888e-02]
+--- monolith asimov-contact p=1, 60x30x8 hexahedron (cavity removed), 6624 cells, 26730 dofs, hartmann_neff, ZBC=free, depth=2, param=2.528e+06 (~penalty 1.0e+07), theta=0, 432+432 wall facets (local) ---
+Step failed at disp -0.30781 -> -0.40781: Newton did not converge (15 its)
+Step failed at disp -0.30781 -> -0.35781: Newton did not converge (15 its)
+Step failed at disp -0.33281 -> -0.37031: Newton did not converge (15 its)

@@ -11,7 +11,7 @@ driver3d.py -- shared pieces of the 3D benchmarks (cbox_3d.py, monolith_3d.py).
                        the same log table as the 2D scripts (plotting.from_log compatible)
 
 Environment variables (all optional)
-    REG_METHODS   none (default) | huhu_lulu,huhu         P_VALUES  2        (p >= 2 is required)
+    REG_METHODS   none (default) | huhu_lulu,huhu         P_VALUES  1        (asimov-contact: must equal the geometry degree = 1)
     REG_VALUE     1e-5                    MESHES    NxxNy    e.g. 20x10,40x20  (2D definition)
     NZ            8   elements over the depth     DEPTH   extrusion depth (default: 2D width)
     ZBC           free | plane_strain     CELL_TYPE hexahedron | tetrahedron
@@ -184,7 +184,7 @@ def solve_with_load_stepping(L, u, bcs, disp, target, prm, emit=None, on_step=No
 # ----------------------------------------------------------------------------
 def sweep_main(case, run_case, default_meshes, comm=MPI.COMM_WORLD):
     reg_methods = env_list("REG_METHODS", "none")  # none | huhu_lulu | huhu
-    degrees = env_list("P_VALUES", "2", int)
+    degrees = env_list("P_VALUES", "1", int)
     meshes = parse_meshes(os.environ.get("MESHES", default_meshes))
     k_reg = float(os.environ.get("REG_VALUE", "1e-5"))
     verbose = os.environ.get("VERBOSE", "0") == "1"

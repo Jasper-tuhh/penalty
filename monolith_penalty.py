@@ -51,6 +51,9 @@ def run_case(Nx, Ny, fe_degree, reg_method, k_reg, out_dir, emit, verbose=False)
     """reg_method / k_reg are accepted for compatibility with sweep_main and ignored."""
     comm = MPI.COMM_WORLD
     t_start = MPI.Wtime()
+    if fe_degree != 1:
+        raise ValueError("dolfinx_contact needs displacement degree == geometry degree; the box meshes "
+                         "have linear geometry, so use P_VALUES=1 (no Hessian regularisation any more)")
     if Nx % 20 or Ny % 5:
         raise ValueError("monolith needs Nx % 20 == 0 and Ny % 5 == 0 so that the 0.1-wide walls coincide with mesh lines")
 
